@@ -7,7 +7,7 @@
   <title>S-mystyle 公式サイト</title>
   <link rel="stylesheet" href="style.css" />
 
-  <!-- CollectionPage + 代表Service -->
+  <!-- CollectionPage（サービス一覧） -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -22,6 +22,63 @@
       {"@type":"Service","name":"ルート配送"}
     ],
     "isPartOf":{"@type":"WebSite","url":"https://www.s-mystyle.com/"}
+  }
+  </script>
+
+  <!-- ItemList（案件例の構造化データ／本文と一致） -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ItemList",
+    "name":"案件例（サンプル）",
+    "url":"https://www.s-mystyle.com/service.html#case-studies",
+    "itemListElement":[
+      {
+        "@type":"ListItem",
+        "position":1,
+        "item":{
+          "@type":"Thing",
+          "name":"突発チャーター（都内→埼玉／2時間以内）",
+          "description":"急な欠員で即時手配。軽バン・直行直帰・半日拘束なしの条件で適合度上位ドライバーを即時マッチ。"
+        }
+      },
+      {
+        "@type":"ListItem",
+        "position":2,
+        "item":{
+          "@type":"Thing",
+          "name":"EC定期配送（川口集荷→都内5区／平日午後）",
+          "description":"常温小型荷物の定期便。希望時間帯・対応エリア・車両条件を登録したドライバーに優先提案。"
+        }
+      },
+      {
+        "@type":"ListItem",
+        "position":3,
+        "item":{
+          "@type":"Thing",
+          "name":"店舗間横持ち（戸田→越谷／毎朝／時間指定）",
+          "description":"カゴ台車2台の横持ち案件。着時刻厳守・待機最小化の条件で経験ドライバーをピンポイント選定。"
+        }
+      },
+      {
+        "@type":"ListItem",
+        "position":4,
+        "item":{
+          "@type":"Thing",
+          "name":"医療関連の緊急搬送（蕨→新宿／保冷ボックス）",
+          "description":"身分確認・保冷搬送の遵守要件あり。対応資格・評価履歴を満たすドライバーのみを候補提示。"
+        }
+      },
+      {
+        "@type":"ListItem",
+        "position":5,
+        "item":{
+          "@type":"Thing",
+          "name":"イベント機材搬入（さいたま新都心→渋谷／夜間／現場待機）",
+          "description":"現場待機・搬入枠に合わせた夜間稼働。待機手当を事前合意のうえで条件適合者に限定提案。"
+        }
+      }
+    ]
   }
   </script>
 </head>
@@ -44,19 +101,80 @@
     <main id="service">
       <h1>事業内容・サービス一覧</h1>
 
-      <section class="service-details">
-        <h2>サービス詳細（マッチング中心）</h2>
-        <p>配達依頼の条件（エリア／時間／荷量／車両）とドライバーの希望（稼働可能時間／対応エリア／車両）を突合し、双方に最適な提案を即時に行います。定期・チャーター・ルート配送いずれにも対応。</p>
+      <!-- マッチング中心の説明 -->
+      <section class="service-details" aria-labelledby="service-details-title">
+        <h2 id="service-details-title">サービス詳細（マッチング中心）</h2>
+        <p>
+          配達依頼の条件（エリア／時間／荷量／車両）とドライバーの希望（稼働可能時間／対応エリア／車両）を突合し、双方に最適な提案を即時に行います。定期・チャーター・ルート配送いずれにも対応。
+        </p>
       </section>
 
-      <section class="pricing-guide">
-        <h2>料金・報酬の考え方</h2>
-        <p>距離・時間帯・荷量・待機の有無等で算出し、案件ごとに事前提示。依頼者は概算の透明化、ドライバーは報酬の見える化で納得感のあるマッチングを実現します。</p>
+      <!-- 料金・報酬の考え方 -->
+      <section class="pricing-guide" aria-labelledby="pricing-title">
+        <h2 id="pricing-title">料金・報酬の考え方</h2>
+        <p>
+          距離・時間帯・荷量・待機の有無等で算出し、案件ごとに事前提示。依頼者は概算の透明化、ドライバーは報酬の見える化で納得感のあるマッチングを実現します。
+        </p>
       </section>
 
-      <section class="case-studies">
-        <h2>導入事例／実績</h2>
-        <p>＜例＞突発のチャーターに即応／ルート最適化でコスト削減／定期便の品質向上とクレーム低減 等。今後、依頼者・ドライバー双方の声を掲載していきます。</p>
+      <!-- 導入事例／実績（案件例を追加） -->
+      <section class="case-studies" id="case-studies" aria-labelledby="case-title">
+        <h2 id="case-title">導入事例／実績（案件例）</h2>
+
+        <!-- カード調の見栄えにするため、既存の .strengths のカードスタイルを活用 -->
+        <ul class="strengths">
+          <li>
+            <i class="icon" aria-hidden="true">★</i>
+            <h3>突発チャーター（都内→埼玉／2時間以内）</h3>
+            <p><strong>依頼者の課題：</strong> 当日欠員により急遽の輸送が必要。</p>
+            <p><strong>マッチング条件：</strong> 軽バン／直行直帰／即時着手可／半日拘束なし。</p>
+            <p><strong>運用：</strong> 適合度上位のドライバーに即時提案→合意→配達開始。</p>
+          </li>
+
+          <li>
+            <i class="icon" aria-hidden="true">★</i>
+            <h3>EC定期配送（川口集荷→都内5区／平日午後）</h3>
+            <p><strong>依頼者の課題：</strong> 小型常温の定期便、時間帯の安定運用。</p>
+            <p><strong>マッチング条件：</strong> 希望時間帯・対応エリア登録済みドライバーに優先提案。</p>
+            <p><strong>運用：</strong> ルート最適化・出発時刻固定で品質を安定。</p>
+          </li>
+
+          <li>
+            <i class="icon" aria-hidden="true">★</i>
+            <h3>店舗間横持ち（戸田→越谷／毎朝／時間指定）</h3>
+            <p><strong>依頼者の課題：</strong> 開店前の横持ち、到着時刻厳守。</p>
+            <p><strong>マッチング条件：</strong> カゴ台車2台／時間指定厳守の実績あるドライバー。</p>
+            <p><strong>運用：</strong> バッファ設定・待機最小化で遅延リスクを低減。</p>
+          </li>
+
+          <li>
+            <i class="icon" aria-hidden="true">★</i>
+            <h3>医療関連の緊急搬送（蕨→新宿／保冷ボックス）</h3>
+            <p><strong>依頼者の課題：</strong> 保冷・本人確認などの遵守要件。</p>
+            <p><strong>マッチング条件：</strong> 対応資格・評価履歴条件を満たす候補のみ提示。</p>
+            <p><strong>運用：</strong> コールドチェーン要件に沿った車両・手順で実施。</p>
+          </li>
+
+          <li>
+            <i class="icon" aria-hidden="true">★</i>
+            <h3>イベント機材搬入（さいたま新都心→渋谷／夜間／現場待機）</h3>
+            <p><strong>依頼者の課題：</strong> 搬入枠に合わせた夜間稼働と現場待機。</p>
+            <p><strong>マッチング条件：</strong> 深夜帯対応・待機手当事前合意・積み降ろし補助。</p>
+            <p><strong>運用：</strong> 会場指示に従い、安全確保のうえで搬入完了。</p>
+          </li>
+        </ul>
+
+        <!-- 事例掲載についての注記（サンプルである旨を明示） -->
+        <p style="text-align:center; color:#666; margin-top:10px;">
+          ※上記はサンプル案件例です。実案件は条件により内容・手順が異なります。
+        </p>
+
+        <!-- 案件相談の導線 -->
+        <p style="text-align:center; margin-top:20px;">
+          <a class="btn-line-cta" href="contact.html">案件の相談・見積はこちら</a>
+          &nbsp;&nbsp;
+          <a class="btn-line-cta" href="lp_recruit.html">ドライバー登録（応募）はこちら</a>
+        </p>
       </section>
     </main>
   </div>
