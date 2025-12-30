@@ -1,57 +1,129 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>S-mystyle 公式サイト</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>S-mystyle — 事業内容・サービス一覧</title>
+  <meta name="description" content="S-mystyle の事業内容・サービス一覧。サービス詳細、料金体系の目安、導入事例/実績をわかりやすくご紹介します。" />
+  style.css
 </head>
 <body>
+  #main本文へスキップ</a>
 
-    <header>
-        <h1>S-mystyle</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">トップページ</a></li>
-                <li><a href="service.html">事業内容・サービス一覧</a></li>
-                <li><a href="company.html">会社概要・ビジョン</a></li>
-                <li><a href="recruit.html">採用情報</a></li>
-                <li><a href="contact.html">お問い合わせ</a></li>
-            </ul>
-        </nav>
-    </header>
-
+  <header class="site-header" role="banner">
     <div class="container">
-        <main id="service">
-            <h1>事業内容・サービス一覧</h1>
-
-            <section class="service-details">
-                <h2>サービス詳細</h2>
-                <p>提供するサービスの種類ごとに、対象とメリットを記載。</p>
-            </section>
-
-            <section class="pricing-guide">
-                <h2>料金体系の目安</h2>
-                <p>透明性を示すため、料金の算出方法や概算を提示。</p>
-            </section>
-
-            <section class="case-studies">
-                <h2>導入事例/実績</h2>
-                <p>「こんな問題を解決しました」という具体的なケースを紹介。</p>
-            </section>
-        </main>
+      <h1 class="site-title">S-mystyle</h1>
+      <nav class="site-nav" aria-label="主なナビゲーション">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">メニュー</button>
+        <ul id="primary-nav" class="nav-list">
+          <li>index.htmlトップページ</a></li>
+          <li>service.html事業内容・サービス一覧</a></li>
+          <li>company.html会社概要・ビジョン</a></li>
+          <li>recruit.html採用情報</a></li>
+          <li>contact.htmlお問い合わせ</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <footer>
-        <nav>
-            <a href="index.html">トップページ</a> |
-            <a href="service.html">事業内容・サービス一覧</a> |
-            <a href="company.html">会社概要・ビジョン</a> |
-            <a href="recruit.html">採用情報</a> |
-            <a href="contact.html">お問い合わせ</a>
-        </nav>
-        <p>&copy; 2025 S-mystyle</p>
-    </footer>
+  <main id="main">
+    <section class="hero" aria-labelledby="service-hero-title">
+      <div class="container">
+        <h2 id="service-hero-title">事業内容・サービス一覧</h2>
+        <p>提供サービスの対象やメリット、料金目安、導入事例をまとめてご案内します。</p>
+      </div>
+    </section>
 
+    <!-- サービス詳細 -->
+    <section aria-labelledby="detail-title">
+      <div class="container">
+        <h2 id="detail-title">サービス詳細</h2>
+        <p>提供するサービスの種類ごとに、対象とメリットを記載。</p>
+        <div class="features">
+          <ul class="feature-list">
+            <li>
+              <h3>定期配送</h3>
+              <p>毎日・毎週など定期スケジュールで確実にお届け。</p>
+            </li>
+            <li>
+              <h3>チャーター便</h3>
+              <p>急ぎの荷物や時間指定に柔軟対応。直行直帰でリードタイム短縮。</p>
+            </li>
+            <li>
+              <h3>ルート配送</h3>
+              <p>複数拠点を効率よく回る既定ルート配送でコスト最適化。</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 料金体系の目安 -->
+    <section aria-labelledby="price-title">
+      <div class="container">
+        <h2 id="price-title">料金体系の目安</h2>
+        <p>透明性を示すため、料金の算出方法や概算を提示。</p>
+        <table role="table" class="table">
+          <tr>
+            <th scope="row">算出方法</th>
+            <td>距離・重量・時間帯・チャーター有無 等の条件を総合してお見積り</td>
+          </tr>
+          <tr>
+            <th scope="row">概算例</th>
+            <td>（例）近距離チャーター：〇〇円〜 ／ 定期配送：月〇〇回で〇〇円〜</td>
+          </tr>
+          <tr>
+            <th scope="row">ご相談</th>
+            <td>個別条件を伺い、最適なプランをご提案します</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <!-- 導入事例 / 実績 -->
+    <section aria-labelledby="case-title">
+      <div class="container">
+        <h2 id="case-title">導入事例 / 実績</h2>
+        <p>「こんな問題を解決しました」という具体的なケースを紹介。</p>
+        <ul class="strengths">
+          <li><i class="icon" aria-hidden="true">★</i> 事例A：緊急案件でチャーター便を即日手配し、納期遅延を回避</li>
+          <li><i class="icon" aria-hidden="true">★</i> 事例B：ルート最適化により、配送コストを〇％削減</li>
+          <li><i class="icon" aria-hidden="true">★</i> 事例C：定期配送の品質向上で、クレーム率を低減</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section aria-labelledby="service-cta-title">
+      <div class="container">
+        <h2 id="service-cta-title">ご相談・お見積り</h2>
+        <p>具体的な条件（距離・重量・時間帯など）をお知らせいただければ、最短でお見積りします。</p>
+        <p>https://line.me/R/ti/p/@your_line_idLINEで相談する</a> ／ contact.htmlお問い合わせフォームへ</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <small>&copy; <span id="year"></span> S-mystyle</small>
+    </div>
+  </footer>
+
+  <script>
+    // モバイルナビ開閉
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.getElementById('primary-nav');
+    if (toggle && menu) {
+      toggle.addEventListener('click', () => {
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!expanded));
+        menu.classList.toggle('is-open', !expanded);
+      });
+    }
+    // 年号
+    const y = document.getElementById('year');
+    if (y) y.textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

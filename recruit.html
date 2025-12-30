@@ -1,143 +1,113 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>S-mystyle 公式サイト</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        /* 採用情報ページ専用スタイル */
-        #recruit {
-            max-width: 900px; /* コンテンツの最大幅を指定 */
-            margin: 0 auto;   /* 全体を中央寄せ */
-            padding: 20px;    /* コンテンツ内外の余白 */
-            text-align: center; /* h1などのテキストを中央寄せ */
-        }
-
-        #recruit section {
-            background-color: transparent; /* 各セクションの背景色 */
-            padding: 30px;             /* 内側の余白を増やしてバランスを調整 */
-            margin-bottom: 30px;       /* セクション間の余白 */
-            border-radius: 0;        /* 角を丸くする */
-            box-shadow: none; /* 影をつけて立体感を出す */
-        }
-
-        /* 募集要項セクションのテキストを左寄せにする */
-        #recruit .job-requirements {
-            text-align: left;
-        }
-
-        /* 募集要項のh2のみ中央寄せに戻す */
-        #recruit .job-requirements h2 {
-            text-align: center;
-        }
-
-        /* 募集要項テーブルの項目(th)に右側の余白を追加 */
-        #recruit .job-requirements th {
-            padding-right: 3em; /* 約3文字分の余白 */
-            white-space: nowrap; /* 項目名が折り返さないようにする */
-        }
-
-        /* 「働くメリット」と「応募フロー」のリストや段落を左寄せにする */
-        #recruit .benefits ul,
-        #recruit .application-flow ol {
-            text-align: left;
-        }
-    </style>
-    </head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>S-mystyle — 採用情報</title>
+  <meta name="description" content="S-mystyle の採用情報ページ。募集要項、働くメリット、応募フローをご案内します。" />
+  <link rel="stylesheet" href="style.css" />
+</head>
 <body>
+  <a class="skip-link" href="#main">本文へスキップ</a>
 
-    <header>
-        <h1>S-mystyle</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">トップページ</a></li>
-                <li><a href="service.html">事業内容・サービス一覧</a></li>
-                <li><a href="company.html">会社概要・ビジョン</a></li>
-                <li><a href="recruit.html">採用情報</a></li>
-                <li><a href="contact.html">お問い合わせ</a></li>
-            </ul>
-        </nav>
-    </header>
-
+  <header class="site-header" role="banner">
     <div class="container">
-        <main id="recruit">
-            <h1>採用情報</h1>
-
-            <section class="job-requirements">
-                <h2>募集要項</h2>
-                <table>
-                    <tr>
-                        <th>職種</th>
-                        <td>ドライバー</td>
-                    </tr>
-                    <tr>
-                        <th>勤務地</th>
-                        <td>特に定め無し（配達エリアによる）</td>
-                    </tr>
-                    <tr>
-                        <th>報酬</th>
-                        <td>13,000円（明細は応相談）</td>
-                    </tr>
-                    <tr>
-                        <th>勤務時間</th>
-                        <td>5～8時間（配達件数による）</td>
-                    </tr>
-                    <tr>
-                        <th>車両</th>
-                        <td>持ち込み（黒ナンバー）</td>
-                    </tr>
-                    <tr>
-                        <th>保険</th>
-                        <td>貨物軽自動車運送事業に適合する保険への加入必須</td>
-                    </tr>
-                    <tr>
-                        <th>その他</th>
-                        <td>詳細についてはお問い合わせください。</td>
-                    </tr>
-                </table>
-            </section>
-
-            <section class="benefits">
-                <h2>働くメリット</h2>
-                <ul>
-                    <li><strong>自由な働き方：</strong>ご自身のスケジュールに合わせて、働く時間や日数を調整できます。</li>
-                    <li><strong>高収入を目指せる：</strong>配達件数や稼働時間に応じて、頑張りが直接収入に反映されます。</li>
-                    <li><strong>未経験者歓迎：</strong>充実した研修とサポート体制で、初めての方でも安心してスタートできます。</li>
-                    <li><strong>直行直帰OK：</strong>出社の必要はなく、ご自宅から直接配達エリアへ向かえます。</li>
-                </ul>
-            </section>
-
-            <section class="application-flow">
-                <h2>応募フロー</h2>
-                <ol>
-                    <li>
-                        <h3>ご応募</h3>
-                        <p>ご応募は、LINEにて受け付けております。お気軽にご連絡ください。</p>
-                    </li>
-                    <li>
-                        <h3>面談</h3>
-                        <p>担当者よりご連絡し、お仕事内容や条件について詳しくご説明します。ご不明な点もここで解消できます。</p>
-                    </li>
-                    <li>
-                        <h3>業務開始</h3>
-                        <p>双方の合意後、契約手続きを経てお仕事スタートとなります。</p>
-                    </li>
-                </ol>
-            </section>
-        </main>
+      <h1 class="site-title">S-mystyle</h1>
+      <nav class="site-nav" aria-label="主なナビゲーション">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">メニュー</button>
+        <ul id="primary-nav" class="nav-list">
+          <li><a href="index.html">トップページ</a></li>
+          <li><a href="service.html">事業内容・サービス一覧</a></li>
+          <li><a href="company.html">会社概要・ビジョン</a></li>
+          <li><a href="recruit.html" aria-current="page">採用情報</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <footer>
-        <nav>
-            <a href="index.html">トップページ</a> |
-            <a href="service.html">事業内容・サービス一覧</a> |
-            <a href="company.html">会社概要・ビジョン</a> |
-            <a href="recruit.html">採用情報</a> |
-            <a href="contact.html">お問い合わせ</a>
-        </nav>
-        <p>&copy; 2025 S-mystyle</p>
-    </footer>
+  <main id="main">
+    <section aria-labelledby="req-title">
+      <div class="container">
+        <h2 id="req-title">募集要項</h2>
+        <table role="table" class="table">
+          <tr>
+            <th scope="row">職種</th>
+            <td>ドライバー</td>
+          </tr>
+          <tr>
+            <th scope="row">勤務地</th>
+            <td>特に定め無し（配達エリアによる）</td>
+          </tr>
+          <tr>
+            <th scope="row">報酬</th>
+            <td>13,000円（明細は応相談）</td>
+          </tr>
+          <tr>
+            <th scope="row">勤務時間</th>
+            <td>5〜8時間（配達件数による）</td>
+          </tr>
+          <tr>
+            <th scope="row">車両</th>
+            <td>持ち込み（黒ナンバー）</td>
+          </tr>
+          <tr>
+            <th scope="row">保険</th>
+            <td>貨物軽自動車運送事業に適合する保険への加入必須</td>
+          </tr>
+          <tr>
+            <th scope="row">その他</th>
+            <td>詳細についてはお問い合わせください。</td>
+          </tr>
+        </table>
+      </div>
+    </section>
 
+    <section aria-labelledby="merit-title">
+      <div class="container">
+        <h2 id="merit-title">働くメリット</h2>
+        <ul class="strengths">
+          <li><i class="icon" aria-hidden="true">★</i> 自由な働き方：スケジュールに合わせて時間・日数を調整可能。</li>
+          <li><i class="icon" aria-hidden="true">★</i> 高収入を目指せる：配達件数や稼働時間に応じて頑張りが収入に反映。</li>
+          <li><i class="icon" aria-hidden="true">★</i> 未経験者歓迎：充実した研修とサポートで安心してスタート。</li>
+          <li><i class="icon" aria-hidden="true">★</i> 直行直帰OK：出社不要で、自宅から直接配達エリアへ向かえます。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section aria-labelledby="flow-title">
+      <div class="container">
+        <h2 id="flow-title">応募フロー</h2>
+        <ol class="flow">
+          <li><strong>ご応募</strong> — LINEにて受け付けています。お気軽にご連絡ください。</li>
+          <li><strong>面談</strong> — 担当者よりご連絡し、仕事内容や条件についてご説明します。</li>
+          <li><strong>業務開始</strong> — 双方合意後、契約手続きを経てお仕事スタートとなります。</li>
+        </ol>
+        <p><a class="btn btn-primary btn-line-cta" href="https://line.me/R/ti/p/@your_line_id" target="_blank" rel="noopener">LINEで応募する</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <small>&copy; <span id="year"></span> S-mystyle</small>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.getElementById('primary-nav');
+    if (toggle && menu) {
+      toggle.addEventListener('click', () => {
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!expanded));
+        menu.classList.toggle('is-open', !expanded);
+      });
+    }
+    const y = document.getElementById('year');
+    if (y) y.textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
+``

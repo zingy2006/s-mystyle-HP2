@@ -1,58 +1,94 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>S-mystyle 公式サイト</title>
-     <link rel="stylesheet" href="style.css">
-   </head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>S-mystyle — お問い合わせ</title>
+  <meta name="description" content="S-mystyle へのお問い合わせページ。公式LINEのご案内、メールフォーム、電話連絡の方法をご案内します。" />
+  <link rel="stylesheet" href="style.css" />
+</head>
 <body>
+  <a class="skip-link" href="#main">本文へスキップ</a>
 
-    <header>
-        <h1>S-mystyle</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">トップページ</a></li>
-                <li><a href="service.html">事業内容・サービス一覧</a></li>
-                <li><a href="company.html">会社概要・ビジョン</a></li>
-                <li><a href="recruit.html">採用情報</a></li>
-                <li><a href="contact.html">お問い合わせ</a></li>
-            </ul>
-        </nav>
-    </header>
-
+  <header class="site-header" role="banner">
     <div class="container">
-        <main id="contact">
-            <h1>お問い合わせ</h1>
-
-            <section class="line-cta">
-                <h2>公式LINE誘導</h2>
-                <p>LINE登録へのボタンを最も大きく、目立つように配置。</p>
-                <a href="#" class="btn-line-cta">公式LINEに登録する</a>
-            </section>
-
-            <section class="form-area">
-                <h2>フォーム</h2>
-                <p>LINEを使わない顧客向けに、念のため問い合わせフォームも設置。</p>
-            </section>
-
-            <section class="phone-info">
-                <h2>電話番号</h2>
-                <p>緊急性の高い顧客向けに、電話番号も記載。</p>
-            </section>
-        </main>
+      <h1 class="site-title">S-mystyle</h1>
+      <nav class="site-nav" aria-label="主なナビゲーション">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">メニュー</button>
+        <ul id="primary-nav" class="nav-list">
+          <li><a href="index.html">トップページ</a></li>
+          <li><a href="service.html">事業内容・サービス一覧</a></li>
+          <li><a href="company.html">会社概要・ビジョン</a></li>
+          <li><a href="recruit.html">採用情報</a></li>
+          <li><a href="contact.html" aria-current="page">お問い合わせ</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <footer>
-        <nav>
-            <a href="index.html">トップページ</a> |
-            <a href="service.html">事業内容・サービス一覧</a> |
-            <a href="company.html">会社概要・ビジョン</a> |
-            <a href="recruit.html">採用情報</a> |
-            <a href="contact.html">お問い合わせ</a>
-        </nav>
-        <p>&copy; 2025 S-mystyle</p>
-    </footer>
+  <main id="main">
+    <section class="hero" aria-labelledby="contact-hero-title">
+      <div class="container">
+        <h2 id="contact-hero-title">お問い合わせ</h2>
+        <p>最短・確実にやり取りできる「公式LINE」をおすすめしています。</p>
+        <p><a class="btn btn-primary btn-line-cta" href="https://line.me/R/ti/p/@your_line_id" target="_blank" rel="noopener">公式LINEに登録する</a></p>
+      </div>
+    </section>
 
+    <section aria-labelledby="form-title">
+      <div class="container">
+        <h2 id="form-title">メールフォーム</h2>
+        <form class="form" action="#" method="post" novalidate>
+          <div class="form-field">
+            <label for="name">お名前 <span aria-hidden="true">*</span></label>
+            <input id="name" name="name" type="text" autocomplete="name" required />
+          </div>
+          <div class="form-field">
+            <label for="email">メールアドレス <span aria-hidden="true">*</span></label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+          </div>
+          <div class="form-field">
+            <label for="tel">電話番号</label>
+            <input id="tel" name="tel" type="tel" autocomplete="tel" placeholder="例: 090-1234-5678" />
+          </div>
+          <div class="form-field">
+            <label for="message">お問い合わせ内容</label>
+            <textarea id="message" name="message" rows="5" placeholder="ご用件を具体的にご記入ください"></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">送信</button>
+        </form>
+      </div>
+    </section>
+
+    <section aria-labelledby="tel-title">
+      <div class="container">
+        <h2 id="tel-title">お電話でのご連絡</h2>
+        <p>緊急のご用件はお電話をご利用ください。</p>
+        <!-- 実番号が未提供のため、以下は差し替え想定 -->
+        <!-- <p><a href="tel:0000000000" class="btn">TEL: 00-0000-0000</a></p> -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <small>&copy; <span id="year"></span> S-mystyle</small>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.getElementById('primary-nav');
+    if (toggle && menu) {
+      toggle.addEventListener('click', () => {
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!expanded));
+        menu.classList.toggle('is-open', !expanded);
+      });
+    }
+    const y = document.getElementById('year');
+    if (y) y.textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
