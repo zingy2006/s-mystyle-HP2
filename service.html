@@ -3,164 +3,160 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>S-mystyle 公式サイト</title>
+
+  <!-- 外部CSS：あなたの環境を変えない -->
   style.css
 
-  <style>
-    /* 導入事例表（前回のまま） */
-    .case-table {
-      width: 100%;
-      max-width: 1120px;
-      margin: 0 auto;
-      border-collapse: collapse;
-      table-layout: fixed;
-    }
-    .case-table th,
-    .case-table td {
-      border: none !important;
-      background: transparent;
-      vertical-align: top;
-     ;
-      font-weight: bold;
-    }
-    @media (max-width: 640px) {
-      .case-table { table-layout: auto; }
-    }
-  </style>
-
-  <!-- schema（省略：前回のまま入れるだけ） -->
 </head>
 <body>
 
-  <header>
-    <h1>S-mystyle</h1>
-    <nav>
-      <ul>
-        <li>index.htmlトップページ</a></li>
-        <li>service.html事業内容・サービス一覧</a></li>
-        <li>company.html会社概要・ビジョン</a></li>
-        <li>recruit.html採用情報</a></li>
-        <li>contact.htmlお問い合わせ</a></li>
-      </ul>
-    </nav>
-  </header>
+<header class="header">
+  <h1 class="site-title">S-mystyle</h1>
 
-  <div class="container">
-    <main id="service">
-      <h1>事業内容・サービス一覧</h1>
+  <!-- 👇 リンクは減らさず元通り全て掲載 -->
+  <nav class="global-nav">
+    index.htmlトップページ</a>
+    service.html事業内容・サービス一覧</a>
+    company.html会社概要・ビジョン</a>
+    recruit.html採用情報</a>
+    contact.htmlお問い合わせ</a>
+    lp_recruit.htmlドライバー登録</a>
+  </nav>
+</header>
 
-      <!-- ✔ 改善１：短文ブロック化 -->
-      <section class="service-details">
-        <h2>サービス詳細（マッチング中心）</h2>
+<div class="container">
+<main id="service">
 
-        <p>配達依頼とドライバーの条件を突き合わせ、最適な組み合わせを即時に提案します。</p>
+  <h1 class="page-title">事業内容・サービス一覧</h1>
 
-        <p>依頼者が入力する条件は次のとおりです。</p>
-        <ul>
-          <li>エリア（出発地・到着地）</li>
-          <li>希望時間帯</li>
-          <li>荷量・荷姿</li>
-          <li>必要な車両タイプ</li>
-        </ul>
 
-        <p>ドライバー側の登録情報はこちらです。</p>
-        <ul>
-          <li>対応可能エリア</li>
-          <li>稼働できる時間帯</li>
-          <li>車両タイプ／車両条件</li>
-          <li>評価や実績</li>
-        </ul>
+  <!-- =======================
+       サービス詳細
+     ======================= -->
+  <section class="block-section">
+    <h2 class="section-title">サービス詳細（マッチング中心）</h2>
 
-        <p>この２つを照合し、マッチ度の高いドライバーから順に提案します。</p>
-      </section>
+    <p>
+      配達依頼とドライバーの条件を照合し、マッチ度の高い順に即時提案します。
+    </p>
 
-      <!-- ✔ 改善２：料金説明も短文化 -->
-      <section class="pricing-guide">
-        <h2>料金・報酬の考え方</h2>
+    <!-- li禁止・●禁止 → 行ボックスで左揃え -->
+    <div class="info-block">
+      <h3 class="info-title">依頼者が入力する条件</h3>
 
-        <p>料金（依頼者）・報酬（ドライバー）は、案件の条件をもとに事前に決まります。</p>
+      <div class="info-row">・エリア（出発地・到着地）</div>
+      <div class="info-row">・希望時間帯</div>
+      <div class="info-row">・荷量・荷姿</div>
+      <div class="info-row">・必要な車両タイプ</div>
+    </div>
 
-        <p>主な要素は以下のとおりです。</p>
-        <ul>
-          <li>距離（走行キロ）</li>
-          <li>時間帯（深夜・早朝の割増）</li>
-          <li>荷量・荷姿（人力で持てるか／台車か／カゴ台車か）</li>
-          <li>待機時間の有無</li>
-        </ul>
+    <div class="info-block">
+      <h3 class="info-title">ドライバーが登録する情報</h3>
 
-        <p>すべて事前に提示されるので、依頼者は「料金の透明性」、ドライバーは「納得して受けられる報酬」が確保されます。</p>
-      </section>
+      <div class="info-row">・対応可能エリア</div>
+      <div class="info-row">・稼働できる時間帯</div>
+      <div class="info-row">・車両タイプ・条件</div>
+      <div class="info-row">・評価や実績</div>
+    </div>
 
-      <!-- ✔ 改善３：導入事例は前回の表のまま（読みやすさ優先） -->
-      <section class="case-studies" id="case-studies">
-        <h2>導入事例／実績（案件例）</h2>
+    <p>
+      上記を照合し、最適なドライバーから順に提案します。
+    </p>
+  </section>
 
-        <table class="case-table" role="table">
-          <thead>
-            <tr>
-              <th>案件名</th>
-              <th>依頼者の課題</th>
-              <th>マッチング条件</th>
-              <th>運用</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>突発チャーター（都内→埼玉／2時間以内）</strong></td>
-              <td>急な欠員で当日輸送が必要。</td>
-              <td>軽バン・直行直帰・即時着手可。</td>
-              <td>適合度上位へ即時提案→合意→配達。</td>
-            </tr>
-            <tr>
-              <td><strong>EC定期配送（川口→都内5区／午後）</strong></td>
-              <td>毎日の時間帯を安定させたい。</td>
-              <td>時間帯・エリア登録済のドライバー。</td>
-              <td>ルート最適化で安定運行を実現。</td>
-            </tr>
-            <tr>
-              <td><strong>店舗間横持ち（戸田→越谷／毎朝）</strong></td>
-              <td>開店前に必ず到着したい。</td>
-              <td>カゴ台車2台対応・時間厳守実績。</td>
-              <td>バッファ設定・待機最小化で遅延防止。</td>
-            </tr>
-            <tr>
-              <td><strong>医療緊急搬送（蕨→新宿／保冷）</strong></td>
-              <td>保冷保持・本人確認など遵守要件。</td>
-              <td>資格・評価基準を満たす候補のみ。</td>
-              <td>保冷要件に沿った輸送手順で実施。</td>
-            </tr>
-            <tr>
-              <td><strong>イベント搬入（さいたま新都心→渋谷／夜間）</strong></td>
-              <td>搬入枠に合わせた深夜対応。</td>
-              <td>夜間稼働・待機手当合意済み。</td>
-              <td>安全確保のうえ指定枠で搬入完了。</td>
-            </tr>
-          </tbody>
-        </table>
 
-        <p style="text-align:center; margin-top:10px; color:#666;">
-          ※上記はサンプル案件例です。実案件は条件により異なります。
-        </p>
 
-        <p style="text-align:center; margin-top:20px;">
-          contact.html案件の相談・見積はこちら</a>　
-          lp_recruit.htmlドライバー登録（応募）はこちら</a>
-        </p>
-      </section>
-    </main>
+  <!-- =======================
+       料金説明
+     ======================= -->
+  <section class="block-section">
+    <h2 class="section-title">料金・報酬の考え方</h2>
+
+    <p>
+      料金（依頼者）・報酬（ドライバー）は案件条件の組み合わせで事前に決まります。
+    </p>
+
+    <div class="info-block">
+      <div class="info-row">・距離（走行キロ）</div>
+      <div class="info-row">・時間帯（深夜・早朝の割増）</div>
+      <div class="info-row">・荷量・荷姿</div>
+      <div class="info-row">・待機時間の有無</div>
+    </div>
+
+    <p>
+      料金の透明性と、ドライバーが納得して受けられる報酬体系を両立します。
+    </p>
+  </section>
+
+
+
+  <!-- =======================
+       導入事例（2×2 カード）
+     ======================= -->
+  <section class="block-section">
+    <h2 class="section-title">導入事例・実績（案件例）</h2>
+
+    <!-- 2×2 のカードグリッド構造 -->
+    <div class="case-grid">
+
+      <div class="case-card">
+        <h3 class="case-title">突発チャーター（都内→埼玉／2時間以内）</h3>
+        <div class="case-field"><strong>依頼者の課題：</strong>急な欠員で当日輸送が必要</div>
+        <div class="case-field"><strong>条件：</strong>軽バン・直行直帰・即時着手可</div>
+        <div class="case-field"><strong>運用：</strong>即時提案→合意→配達</div>
+      </div>
+
+      <div class="case-card">
+        <h3 class="case-title">EC定期配送（川口→都内5区／午後）</h3>
+        <div class="case-field"><strong>依頼者の課題：</strong>毎日の時間帯を安定させたい</div>
+        <div class="case-field"><strong>条件：</strong>エリア登録済ドライバー</div>
+        <div class="case-field"><strong>運用：</strong>ルート最適化で安定運行</div>
+      </div>
+
+      <div class="case-card">
+        <h3 class="case-title">店舗間横持ち（戸田→越谷／毎朝）</h3>
+        <div class="case-field"><strong>依頼者の課題：</strong>開店前に必ず到着</div>
+        <div class="case-field"><strong>条件：</strong>カゴ台車2台対応</div>
+        <div class="case-field"><strong>運用：</strong>バッファ設定・遅延防止</div>
+      </div>
+
+      <div class="case-card">
+        <h3 class="case-title">医療緊急搬送（蕨→新宿／保冷）</h3>
+        <div class="case-field"><strong>依頼者の課題：</strong>保冷保持・要件遵守</div>
+        <div class="case-field"><strong>条件：</strong>資格・評価条件を満たす候補</div>
+        <div class="case-field"><strong>運用：</strong>保冷要件に沿った輸送</div>
+      </div>
+
+    </div>
+
+    <p class="note">
+      ※上記はサンプル案件例です。実案件は条件により異なります。
+    </p>
+
+    <div class="case-links">
+      contact.html案件の相談・見積はこちら</a>　
+      lp_recruit.htmlドライバー登録（応募）はこちら</a>
+    </div>
+
+  </section>
+
+</main>
+</div>
+
+
+<footer class="footer">
+  <div class="footer-nav">
+    index.htmlトップページ</a> |
+    service.html事業内容・サービス一覧</a> |
+    company.html会社概要・ビジョン</a> |
+    recruit.html採用情報</a> |
+    contact.htmlお問い合わせ</a> |
+    lp_recruit.htmlドライバー登録</a>
   </div>
-
-  <footer>
-    <nav>
-      index.htmlトップページ</a> |
-      service.html事業内容・サービス一覧</a> |
-      company.html会社概要・ビジョン</a> |
-      recruit.html採用情報</a> |
-      contact.htmlお問い合わせ</a>
-    </nav>
-    <p>&copy; 2025 S-mystyle</p>
-  </footer>
+  <p>&copy; 2025 S-mystyle</p>
+</footer>
 
 </body>
 </html>
