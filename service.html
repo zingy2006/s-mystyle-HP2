@@ -6,156 +6,148 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>S-mystyle 公式サイト</title>
 
-  <!-- 外部CSS：あなたの環境を変えない -->
-  style.css
-
+  <!-- 外部CSSのみ。環境を変えない -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
 <header class="header">
-  <h1 class="site-title">S-mystyle</h1>
+  <div class="header-inner">
+    <h1 class="site-title">S-mystyle</h1>
 
-  <!-- 👇 リンクは減らさず元通り全て掲載 -->
-  <nav class="global-nav">
-    index.htmlトップページ</a>
-    service.html事業内容・サービス一覧</a>
-    company.html会社概要・ビジョン</a>
-    recruit.html採用情報</a>
-    contact.htmlお問い合わせ</a>
-    lp_recruit.htmlドライバー登録</a>
-  </nav>
+    <!-- li禁止：テキスト左揃えでリンク列挙 -->
+    <nav class="global-nav" aria-label="グローバルナビゲーション">
+      <a href="index.html">トップページ</a>
+      <span class="sep">|</span>
+      <a href="service.html" aria-current="page">事業内容・サービス一覧</a>
+      <span class="sep">|</span>
+      <a href="company.html">会社概要・ビジョン</a>
+      <span class="sep">|</span>
+      <a href="recruit.html">採用情報</a>
+      <span class="sep">|</span>
+      <a href="contact.html">お問い合わせ</a>
+      <span class="sep">|</span>
+      <a href="lp_recruit.html">ドライバー登録</a>
+    </nav>
+  </div>
 </header>
 
 <div class="container">
-<main id="service">
+  <main id="service" class="main">
+    <h1 class="page-title">事業内容・サービス一覧</h1>
 
-  <h1 class="page-title">事業内容・サービス一覧</h1>
+    <!-- サービス詳細 -->
+    <section class="section">
+      <h2 class="section-title">サービス詳細（マッチング中心）</h2>
 
+      <p class="lead">
+        配達依頼とドライバーの条件を照合し、マッチ度の高い順に最適なドライバーを即時提案します。
+      </p>
 
-  <!-- =======================
-       サービス詳細
-     ======================= -->
-  <section class="block-section">
-    <h2 class="section-title">サービス詳細（マッチング中心）</h2>
-
-    <p>
-      配達依頼とドライバーの条件を照合し、マッチ度の高い順に即時提案します。
-    </p>
-
-    <!-- li禁止・●禁止 → 行ボックスで左揃え -->
-    <div class="info-block">
-      <h3 class="info-title">依頼者が入力する条件</h3>
-
-      <div class="info-row">・エリア（出発地・到着地）</div>
-      <div class="info-row">・希望時間帯</div>
-      <div class="info-row">・荷量・荷姿</div>
-      <div class="info-row">・必要な車両タイプ</div>
-    </div>
-
-    <div class="info-block">
-      <h3 class="info-title">ドライバーが登録する情報</h3>
-
-      <div class="info-row">・対応可能エリア</div>
-      <div class="info-row">・稼働できる時間帯</div>
-      <div class="info-row">・車両タイプ・条件</div>
-      <div class="info-row">・評価や実績</div>
-    </div>
-
-    <p>
-      上記を照合し、最適なドライバーから順に提案します。
-    </p>
-  </section>
-
-
-
-  <!-- =======================
-       料金説明
-     ======================= -->
-  <section class="block-section">
-    <h2 class="section-title">料金・報酬の考え方</h2>
-
-    <p>
-      料金（依頼者）・報酬（ドライバー）は案件条件の組み合わせで事前に決まります。
-    </p>
-
-    <div class="info-block">
-      <div class="info-row">・距離（走行キロ）</div>
-      <div class="info-row">・時間帯（深夜・早朝の割増）</div>
-      <div class="info-row">・荷量・荷姿</div>
-      <div class="info-row">・待機時間の有無</div>
-    </div>
-
-    <p>
-      料金の透明性と、ドライバーが納得して受けられる報酬体系を両立します。
-    </p>
-  </section>
-
-
-
-  <!-- =======================
-       導入事例（2×2 カード）
-     ======================= -->
-  <section class="block-section">
-    <h2 class="section-title">導入事例・実績（案件例）</h2>
-
-    <!-- 2×2 のカードグリッド構造 -->
-    <div class="case-grid">
-
-      <div class="case-card">
-        <h3 class="case-title">突発チャーター（都内→埼玉／2時間以内）</h3>
-        <div class="case-field"><strong>依頼者の課題：</strong>急な欠員で当日輸送が必要</div>
-        <div class="case-field"><strong>条件：</strong>軽バン・直行直帰・即時着手可</div>
-        <div class="case-field"><strong>運用：</strong>即時提案→合意→配達</div>
+      <div class="info-block">
+        <h3 class="info-title">依頼者が入力する条件</h3>
+        <!-- li禁止・●禁止：行ボックスで左揃え -->
+        <div class="info-row">・エリア（出発地・到着地）</div>
+        <div class="info-row">・希望時間帯</div>
+        <div class="info-row">・荷量・荷姿</div>
+        <div class="info-row">・必要な車両タイプ</div>
       </div>
 
-      <div class="case-card">
-        <h3 class="case-title">EC定期配送（川口→都内5区／午後）</h3>
-        <div class="case-field"><strong>依頼者の課題：</strong>毎日の時間帯を安定させたい</div>
-        <div class="case-field"><strong>条件：</strong>エリア登録済ドライバー</div>
-        <div class="case-field"><strong>運用：</strong>ルート最適化で安定運行</div>
+      <div class="info-block">
+        <h3 class="info-title">ドライバー側の登録情報</h3>
+        <div class="info-row">・対応可能エリア</div>
+        <div class="info-row">・稼働できる時間帯</div>
+        <div class="info-row">・車両タイプ／車両条件</div>
+        <div class="info-row">・評価や実績</div>
       </div>
 
-      <div class="case-card">
-        <h3 class="case-title">店舗間横持ち（戸田→越谷／毎朝）</h3>
-        <div class="case-field"><strong>依頼者の課題：</strong>開店前に必ず到着</div>
-        <div class="case-field"><strong>条件：</strong>カゴ台車2台対応</div>
-        <div class="case-field"><strong>運用：</strong>バッファ設定・遅延防止</div>
+      <p>
+        上記の条件を照合し、マッチ度の高いドライバーから順に提案します。
+      </p>
+    </section>
+
+    <!-- 料金・報酬 -->
+    <section class="section">
+      <h2 class="section-title">料金・報酬の考え方</h2>
+
+      <p class="lead">
+        料金（依頼者）・報酬（ドライバー）は、案件条件をもとに事前に決定します。
+      </p>
+
+      <div class="info-block">
+        <div class="info-row">・距離（走行キロ）</div>
+        <div class="info-row">・時間帯（深夜・早朝の割増）</div>
+        <div class="info-row">・荷量・荷姿（人力か／台車か／カゴ台車か）</div>
+        <div class="info-row">・待機時間の有無</div>
       </div>
 
-      <div class="case-card">
-        <h3 class="case-title">医療緊急搬送（蕨→新宿／保冷）</h3>
-        <div class="case-field"><strong>依頼者の課題：</strong>保冷保持・要件遵守</div>
-        <div class="case-field"><strong>条件：</strong>資格・評価条件を満たす候補</div>
-        <div class="case-field"><strong>運用：</strong>保冷要件に沿った輸送</div>
+      <p>
+        事前提示のため、依頼者は「料金の透明性」、ドライバーは「納得できる報酬」を確保できます。
+      </p>
+    </section>
+
+    <!-- 導入事例：2×2カードレイアウト（センタリング禁止・左揃え） -->
+    <section class="section case-studies" id="case-studies">
+      <h2 class="section-title">導入事例／実績（案件例）</h2>
+
+      <div class="case-grid">
+        <article class="case-card">
+          <h3 class="case-title">突発チャーター（都内→埼玉／2時間以内）</h3>
+          <div class="case-field"><strong>依頼者の課題：</strong>急な欠員で当日輸送が必要。</div>
+          <div class="case-field"><strong>マッチング条件：</strong>軽バン・直行直帰・即時着手可。</div>
+          <div class="case-field"><strong>運用：</strong>適合度上位へ即時提案→合意→配達。</div>
+        </article>
+
+        <article class="case-card">
+          <h3 class="case-title">EC定期配送（川口→都内5区／午後）</h3>
+          <div class="case-field"><strong>依頼者の課題：</strong>毎日の時間帯を安定させたい。</div>
+          <div class="case-field"><strong>マッチング条件：</strong>時間帯・エリア登録済のドライバー。</div>
+          <div class="case-field"><strong>運用：</strong>ルート最適化で安定運行を実現。</div>
+        </article>
+
+        <article class="case-card">
+          <h3 class="case-title">店舗間横持ち（戸田→越谷／毎朝）</h3>
+          <div class="case-field"><strong>依頼者の課題：</strong>開店前に必ず到着したい。</div>
+          <div class="case-field"><strong>マッチング条件：</strong>カゴ台車2台対応・時間厳守実績。</div>
+          <div class="case-field"><strong>運用：</strong>バッファ設定・待機最小化で遅延防止。</div>
+        </article>
+
+        <article class="case-card">
+          <h3 class="case-title">医療緊急搬送（蕨→新宿／保冷）</h3>
+          <div class="case-field"><strong>依頼者の課題：</strong>保冷保持・本人確認など遵守要件。</div>
+          <div class="case-field"><strong>マッチング条件：</strong>資格・評価基準を満たす候補のみ。</div>
+          <div class="case-field"><strong>運用：</strong>保冷要件に沿った輸送手順で実施。</div>
+        </article>
       </div>
 
-    </div>
+      <p class="case-note">
+        ※上記はサンプル案件例です。実案件は条件により異なります。
+      </p>
 
-    <p class="note">
-      ※上記はサンプル案件例です。実案件は条件により異なります。
-    </p>
-
-    <div class="case-links">
-      contact.html案件の相談・見積はこちら</a>　
-      lp_recruit.htmlドライバー登録（応募）はこちら</a>
-    </div>
-
-  </section>
-
-</main>
+      <div class="case-links">
+        <a href="contact.html">案件の相談・見積はこちら</a>
+        <span class="sep">｜</span>
+        <a href="lp_recruit.html">ドライバー登録（応募）はこちら</a>
+      </div>
+    </section>
+  </main>
 </div>
 
-
 <footer class="footer">
-  <div class="footer-nav">
-    index.htmlトップページ</a> |
-    service.html事業内容・サービス一覧</a> |
-    company.html会社概要・ビジョン</a> |
-    recruit.html採用情報</a> |
-    contact.htmlお問い合わせ</a> |
-    lp_recruit.htmlドライバー登録</a>
-  </div>
-  <p>&copy; 2025 S-mystyle</p>
+  <nav class="footer-nav">
+    <a href="index.html">トップページ</a>
+    <span class="sep">|</span>
+    <a href="service.html" aria-current="page">事業内容・サービス一覧</a>
+    <span class="sep">|</span>
+    <a href="company.html">会社概要・ビジョン</a>
+    <span class="sep">|</span>
+    <a href="recruit.html">採用情報</a>
+    <span class="sep">|</span>
+    <a href="contact.html">お問い合わせ</a>
+    <span class="sep">|</span>
+    <a href="lp_recruit.html">ドライバー登録</a>
+  </nav>
+  <p class="copyright">&copy; 2025 S-mystyle</p>
 </footer>
 
 </body>
