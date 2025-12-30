@@ -7,35 +7,35 @@
   <title>S-mystyle 公式サイト</title>
   <link rel="stylesheet" href="style.css" />
 
-  <!-- AboutPage + Organization詳細（住所は実値に差し替え） -->
+  <!-- AboutPage + Organization -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "AboutPage",
-    "name": "会社概要・ビジョン | S-mystyle",
-    "url": "https://www.s-mystyle.com/company.html",
-    "inLanguage": "ja-JP",
-    "mainEntity": {
-      "@type": "Organization",
-      "name": "S-mystyle",
-      "url": "https://www.s-mystyle.com/",
-      "description": "会社（事業）概要・許認可・保険情報。",
-      "logo": "https://www.s-mystyle.com/logo.png",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "JP",
-        "addressRegion": "埼玉県",
-        "addressLocality": "川口市（例）",
-        "postalCode": "000-0000",
-        "streetAddress": "◯◯（例）"
+    "@context":"https://schema.org",
+    "@type":"AboutPage",
+    "name":"会社概要・ビジョン | S-mystyle",
+    "url":"https://www.s-mystyle.com/company.html",
+    "inLanguage":"ja-JP",
+    "mainEntity":{
+      "@type":"Organization",
+      "name":"S-mystyle",
+      "url":"https://www.s-mystyle.com/",
+      "description":"配達依頼とドライバーの適正マッチングを中心に、定期・ルート・チャーター配送を運営。",
+      "logo":"https://www.s-mystyle.com/logo.png",
+      "address":{
+        "@type":"PostalAddress",
+        "addressCountry":"JP",
+        "addressRegion":"埼玉県",
+        "addressLocality":"さいたま市北区",
+        "postalCode":"000-0000",
+        "streetAddress":"（差し替え）"
       },
-      "contactPoint": [{
-        "@type": "ContactPoint",
-        "contactType": "customer service",
-        "telephone": "+81-90-0000-0000",
-        "email": "info@s-mystyle.com",
-        "areaServed": "JP",
-        "availableLanguage": ["ja"]
+      "contactPoint":[{
+        "@type":"ContactPoint",
+        "contactType":"customer service",
+        "telephone":"+81-90-0000-0000",
+        "email":"info@s-mystyle.com",
+        "areaServed":"JP",
+        "availableLanguage":["ja"]
       }]
     }
   }
@@ -43,53 +43,50 @@
 </head>
 <body>
 
-    <!-- ヘッダー：構成は原文どおり。ランドマークのみ明示 -->
-    <header role="banner">
-        <h1>S-mystyle</h1>
-        <nav aria-label="主なナビゲーション">
-            <ul>
-                <li>index.htmlトップページ</a></li>
-                <li>service.html事業内容・サービス一覧</a></li>
-                <li>company.html会社概要・ビジョン</a></li>
-                <li>recruit.html採用情報</a></li>
-                <li>contact.htmlお問い合わせ</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <h1>S-mystyle</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">トップページ</a></li>
+        <li><a href="service.html">事業内容・サービス一覧</a></li>
+        <li><a href="company.html">会社概要・ビジョン</a></li>
+        <li><a href="recruit.html">採用情報</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <div class="container">
-        <!-- main：原文のまま。ランドマークのみ付与 -->
-        <main id="company" role="main">
-            <h1>会社概要・ビジョン</h1>
+  <div class="container">
+    <main id="company">
+      <h1>会社概要・ビジョン</h1>
 
-            <section class="message" aria-labelledby="message-title">
-                <h2 id="message-title">代表者メッセージ</h2>
-                <p>お客様の事業に対する想いやビジョンを自身の言葉で語る。</p>
-            </section>
+      <section class="message">
+        <h2>代表者メッセージ</h2>
+        <p>依頼者とドライバーが互いに納得できる条件でつながる“健全な配送”の仕組みをつくります。スピード・信頼・透明性を軸に、地域物流を支えます。</p>
+      </section>
 
-            <section class="company-info" aria-labelledby="company-info-title">
-                <h2 id="company-info-title">会社（事業）概要</h2>
-                <p>法人登記した正式な情報を記載し、信頼性を確保。</p>
-            </section>
+      <section class="company-info">
+        <h2>会社（事業）概要</h2>
+        <p>軽貨物配送マッチング事業／定期・ルート・チャーター配送運営。法人登記情報・所在地・連絡先・各種許認可は下記をご参照ください。</p>
+      </section>
 
-            <section class="license-insurance" aria-labelledby="license-title">
-                <h2 id="license-title">許認可・保険情報</h2>
-                <p>必要な許可を得て、コンプライアンスを遵守していることを証明。</p>
-            </section>
-        </main>
-    </div>
+      <section class="license-insurance">
+        <h2>許認可・保険情報</h2>
+        <p>貨物軽自動車運送事業の届出および必要な保険に加入し、コンプライアンスを遵守しています。</p>
+      </section>
+    </main>
+  </div>
 
-    <!-- フッター：原文どおり。ランドマークのみ明示 -->
-    <footer role="contentinfo">
-        <nav aria-label="フッターナビゲーション">
-            index.htmlトップページ</a> |
-            service.html事業内容・サービス一覧</a> |
-            company.html会社概要・ビジョン</a> |
-            recruit.html採用情報</a> |
-            contact.htmlお問い合わせ</a>
-        </nav>
-        <p>&copy; 2025 S-mystyle</p>
-    </footer>
+  <footer>
+    <nav>
+      <a href="index.html">トップページ</a> |
+      <a href="service.html">事業内容・サービス一覧</a> |
+      <a href="company.html">会社概要・ビジョン</a> |
+      <a href="recruit.html">採用情報</a> |
+      <a href="contact.html">お問い合わせ</a>
+    </nav>
+    <p>&copy; 2025 S-mystyle</p>
+  </footer>
 
 </body>
 </html>

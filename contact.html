@@ -7,81 +7,78 @@
   <title>S-mystyle 公式サイト</title>
   <link rel="stylesheet" href="style.css" />
 
-  <!-- ContactPage（LINE/電話/メール等の窓口を明示） -->
+  <!-- ContactPage -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "ContactPage",
-    "name": "お問い合わせ | S-mystyle",
-    "url": "https://www.s-mystyle.com/contact.html",
-    "inLanguage": "ja-JP",
-    "mainEntity": {
-      "@type": "Organization",
-      "name": "S-mystyle",
-      "url": "https://www.s-mystyle.com/",
-      "contactPoint": [{
-        "@type": "ContactPoint",
-        "contactType": "customer service",
-        "telephone": "+81-90-0000-0000",
-        "email": "info@s-mystyle.com",
-        "areaServed": "JP",
-        "availableLanguage": ["ja"]
+    "@context":"https://schema.org",
+    "@type":"ContactPage",
+    "name":"お問い合わせ | S-mystyle",
+    "url":"https://www.s-mystyle.com/contact.html",
+    "inLanguage":"ja-JP",
+    "mainEntity":{
+      "@type":"Organization",
+      "name":"S-mystyle",
+      "url":"https://www.s-mystyle.com/",
+      "contactPoint":[{
+        "@type":"ContactPoint",
+        "contactType":"customer service",
+        "telephone":"+81-90-0000-0000",
+        "email":"info@s-mystyle.com",
+        "areaServed":"JP",
+        "availableLanguage":["ja"]
       }]
     },
-    "sameAs": ["https://line.me/R/ti/p/@your_line_id"]
+    "sameAs":["https://line.me/R/ti/p/@your_line_id"]
   }
   </script>
 </head>
 <body>
 
-    <!-- HEADER（構造・並びはそのまま、ランドマークだけ補強） -->
-    <header role="banner">
-        <h1>S-mystyle</h1>
-        <nav aria-label="主なナビゲーション">
-            <ul>
-                <li>index.htmlトップページ</a></li>
-                <li>service.html事業内容・サービス一覧</a></li>
-                <li>company.html会社概要・ビジョン</a></li>
-                <li>recruit.html採用情報</a></li>
-                <li>contact.htmlお問い合わせ</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <h1>S-mystyle</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">トップページ</a></li>
+        <li><a href="service.html">事業内容・サービス一覧</a></li>
+        <li><a href="company.html">会社概要・ビジョン</a></li>
+        <li><a href="recruit.html">採用情報</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <div class="container">
-       追加） -->
-        <main id="contact" role="main">
-            <h1>お問い合わせ</h1>
+  <div class="container">
+    <main id="contact">
+      <h1>お問い合わせ</h1>
 
-            <section class="line-cta" aria-labelledby="line-title">
-                <h2 id="line-title">公式LINE誘導</h2>
-                <p>LINE登録へのボタンを最も大きく、目立つように配置。</p>
-                <a href="#" class="btn-line-cta">公式LINEに登録する</a>
-            </section>
+      <section class="line-cta">
+        <h2>公式LINE（最短のご連絡）</h2>
+        <p>依頼者のご相談／ドライバーの応募の双方を受け付けています。案件内容や条件をご提示いただくと初回提案がスムーズです。</p>
+        <a href="https://line.me/R/ti/p/@your_line_id" class="btn-line-cta">LINEで相談・応募する</a>
+      </section>
 
-            <section class="form-area" aria-labelledby="form-title">
-                <h2 id="form-title">フォーム</h2>
-                <p>LINEを使わない顧客向けに、念のため問い合わせフォームも設置。</p>
-            </section>
+      <section class="form-area">
+        <h2>メールフォーム</h2>
+        <p>LINEを利用しない方は、依頼者／ドライバーいずれもこちらからご連絡ください（折り返しご提案／ご案内）。</p>
+      </section>
 
-            <section class="phone-info" aria-labelledby="phone-title">
-                <h2 id="phone-title">電話番号</h2>
-                <p>緊急性の高い顧客向けに、電話番号も記載。</p>
-            </section>
-        </main>
-    </div>
+      <section class="phone-info">
+        <h2>お電話</h2>
+        <p>お急ぎの場合はこちらへ。案件ID（任意）や希望時間帯を事前にお知らせいただくとご案内が早くなります。</p>
+      </section>
+    </main>
+  </div>
 
-    <!-- FOOTER（構造・リンク並びはそのまま、roleのみ追加） -->
-    <footer role="contentinfo">
-        <nav aria-label="フッターナビゲーション">
-            index.htmlトップページ</a> |
-            service.html事業内容・サービス一覧</a> |
-            company.html会社概要・ビジョン</a> |
-            recruit.html採用情報</a> |
-            contact.htmlお問い合わせ</a>
-        </nav>
-        <p>&copy; 2025 S-mystyle</p>
-    </footer>
+  <footer>
+    <nav>
+      <a href="index.html">トップページ</a> |
+      <a href="service.html">事業内容・サービス一覧</a> |
+      <a href="company.html">会社概要・ビジョン</a> |
+      <a href="recruit.html">採用情報</a> |
+      <a href="contact.html">お問い合わせ</a>
+    </nav>
+    <p>&copy; 2025 S-mystyle</p>
+  </footer>
 
 </body>
 </html>

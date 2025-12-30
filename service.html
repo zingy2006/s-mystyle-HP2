@@ -7,71 +7,70 @@
   <title>S-mystyle 公式サイト</title>
   <link rel="stylesheet" href="style.css" />
 
-  <!-- CollectionPage（代表サービスは任意で Service として列挙） -->
+  <!-- CollectionPage + 代表Service -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "事業内容・サービス一覧 | S-mystyle",
-    "url": "https://www.s-mystyle.com/service.html",
-    "inLanguage": "ja-JP",
-    "about": [
-      { "@type": "Service", "name": "定期配送" },
-      { "@type": "Service", "name": "チャーター便" },
-      { "@type": "Service", "name": "ルート配送" }
+    "@context":"https://schema.org",
+    "@type":"CollectionPage",
+    "name":"事業内容・サービス一覧 | S-mystyle",
+    "url":"https://www.s-mystyle.com/service.html",
+    "inLanguage":"ja-JP",
+    "about":[
+      {"@type":"Service","name":"配達依頼・ドライバーの適正マッチング"},
+      {"@type":"Service","name":"定期配送"},
+      {"@type":"Service","name":"チャーター便"},
+      {"@type":"Service","name":"ルート配送"}
     ],
-    "isPartOf": { "@type": "WebSite", "url": "https://www.s-mystyle.com/" }
+    "isPartOf":{"@type":"WebSite","url":"https://www.s-mystyle.com/"}
   }
   </script>
 </head>
 <body>
 
-    <!-- HEADER：原文そのまま、ランドマークのみ付与 -->
-    <>S-mystyle</h1>
-        <nav aria-label="主なナビゲーション">
-            <ul>
-                <li>index.htmlトップページ</a></li>
-                <li>service.html事業内容・サービス一覧</a></li>
-                <li>company.html会社概要・ビジョン</a></li>
-                <li>recruit.html採用情報</a></li>
-                <li>contact.htmlお問い合わせ</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <h1>S-mystyle</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">トップページ</a></li>
+        <li><a href="service.html">事業内容・サービス一覧</a></li>
+        <li><a href="company.html">会社概要・ビジョン</a></li>
+        <li><a href="recruit.html">採用情報</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <div class="container">
-        <!-- MAIN：原文そのまま、role だけ追加 -->
-        <main id="service" role="main">
-            <h1>事業内容・サービス一覧</h1>
+  <div class="container">
+    <main id="service">
+      <h1>事業内容・サービス一覧</h1>
 
-            <section class="service-details" aria-labelledby="service-details-title">
-                <h2 id="service-details-title">サービス詳細</h2>
-                <p>提供するサービスの種類ごとに、対象とメリットを記載。</p>
-            </section>
+      <section class="service-details">
+        <h2>サービス詳細（マッチング中心）</h2>
+        <p>配達依頼の条件（エリア／時間／荷量／車両）とドライバーの希望（稼働可能時間／対応エリア／車両）を突合し、双方に最適な提案を即時に行います。定期・チャーター・ルート配送いずれにも対応。</p>
+      </section>
 
-            <section class="pricing-guide" aria-labelledby="pricing-title">
-                <h2 id="pricing-title">料金体系の目安</h2>
-                <p>透明性を示すため、料金の算出方法や概算を提示。</p>
-            </section>
+      <section class="pricing-guide">
+        <h2>料金・報酬の考え方</h2>
+        <p>距離・時間帯・荷量・待機の有無等で算出し、案件ごとに事前提示。依頼者は概算の透明化、ドライバーは報酬の見える化で納得感のあるマッチングを実現します。</p>
+      </section>
 
-            <section class="case-studies" aria-labelledby="case-title">
-                <h2 id="case-title">導入事例/実績</h2>
-                <p>「こんな問題を解決しました」という具体的なケースを紹介。</p>
-            </section>
-        </main>
-    </div>
+      <section class="case-studies">
+        <h2>導入事例／実績</h2>
+        <p>＜例＞突発のチャーターに即応／ルート最適化でコスト削減／定期便の品質向上とクレーム低減 等。今後、依頼者・ドライバー双方の声を掲載していきます。</p>
+      </section>
+    </main>
+  </div>
 
-    <!-- FOOTER：原文そのまま、role だけ追加 -->
-    <footer role="contentinfo">
-        <nav aria-label="フッターナビゲーション">
-            index.htmlトップページ</a> |
-            service.html事業内容・サービス一覧</a> |
-            company.html会社概要・ビジョン</a> |
-            recruit.html採用情報</a> |
-            contact.htmlお問い合わせ</a>
-        </nav>
-        <p>&copy; 2025 S-mystyle</p>
-    </footer>
+  <footer>
+    <nav>
+      <a href="index.html">トップページ</a> |
+      <a href="service.html">事業内容・サービス一覧</a> |
+      <a href="company.html">会社概要・ビジョン</a> |
+      <a href="recruit.html">採用情報</a> |
+      <a href="contact.html">お問い合わせ</a>
+    </nav>
+    <p>&copy; 2025 S-mystyle</p>
+  </footer>
 
 </body>
 </html>

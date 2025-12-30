@@ -2,147 +2,105 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>S-mystyle 公式サイト</title>
-    <link rel="stylesheet" href="style.css" />
-    <!-- 採用情報（概要） -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "採用情報 | S-mystyle",
-      "url": "https://www.s-mystyle.com/recruit.html",
-      "inLanguage": "ja-JP",
-      "description": "募集要項・働くメリット・応募フローの案内。",
-      "isPartOf": { "@type": "WebSite", "url": "https://www.s-mystyle.com/" }
-    }
-    </script>
-    <style>
-        /* 採用情報ページ専用スタイル（原文そのまま） */
-        #recruit {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: center;
-        }
-        #recruit section {
-            background-color: transparent;
-            padding: 30px;
-            margin-bottom: 30px;
-            border-radius: 0;
-            box-shadow: none;
-        }
-        /* 募集要項セクションのテキストを左寄せにする */
-        #recruit .job-requirements { text-align: left; }
-        /* 募集要項のh2のみ中央寄せに戻す */
-        #recruit .job-requirements h2 { text-align: center; }
-        /* 募集要項テーブルの項目(th)に右側の余白を追加 */
-        #recruit .job-requirements th {
-            padding-right: 3em;
-            white-space: nowrap;
-        }
-        /* 「働くメリット」と「応募フロー」のリストや段落を左寄せにする */
-        #recruit .benefits ul,
-        #recruit .application-flow ol { text-align: left; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>S-mystyle 公式サイト</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* 採用情報ページ専用スタイル（オリジナル踏襲） */
+    #recruit { max-width: 900px; margin: 0 auto; padding: 20px; text-align: center; }
+    #recruit section { background-color: transparent; padding: 30px; margin-bottom: 30px; border-radius: 0; box-shadow: none; }
+    #recruit .job-requirements { text-align: left; }
+    #recruit .job-requirements h2 { text-align: center; }
+    #recruit .job-requirements th { padding-right: 3em; white-space: nowrap; }
+    #recruit .benefits ul, #recruit .application-flow ol { text-align: left; }
+  </style>
+
+  <!-- WebPage（採用情報の総合案内） -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebPage",
+    "name":"採用情報 | S-mystyle",
+    "url":"https://www.s-mystyle.com/recruit.html",
+    "inLanguage":"ja-JP",
+    "description":"案件マッチング前提の働き方の案内（募集要項・メリット・応募フロー）。",
+    "isPartOf":{"@type":"WebSite","url":"https://www.s-mystyle.com/"}
+  }
+  </script>
 </head>
 <body>
 
-    <!-- ヘッダー：構成・文言そのまま。ランドマークのみ付与 -->
-    <header role="banner">
-        <h1>S-mystyle</h1>
-        <nav aria-label="主なナビゲーション">
-            <ul>
-                <li><a href="index.html">トップページ</a></li>
-                <li><a href="service.html">事業内容・サービス一覧</a></li>
-                <li><a href="company.html">会社概要・ビジョン</a></li>
-                <li><a href="recruit.html" aria-current="page">採用情報</a></li>
-                <li><a href="contact.html">お問い合わせ</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <h1>S-mystyle</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">トップページ</a></li>
+        <li><a href="service.html">事業内容・サービス一覧</a></li>
+        <li><a href="company.html">会社概要・ビジョン</a></li>
+        <li><a href="recruit.html">採用情報</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <div class="container">
-        <!-- main：原文のまま。roleのみ付与 -->
-        <main id="recruit" role="main">
-            <h1>採用情報</h1>
+  <div class="container">
+    <main id="recruit">
+      <h1>採用情報</h1>
 
-            <section class="job-requirements" aria-labelledby="requirements-title">
-                <h2 id="requirements-title">募集要項</h2>
-                <table role="table">
-                    <tr>
-                        <th scope="row">職種</th>
-                        <td>ドライバー</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">勤務地</th>
-                        <td>特に定め無し（配達エリアによる）</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">報酬</th>
-                        <td>13,000円（明細は応相談）</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">勤務時間</th>
-                        <td>5～8時間（配達件数による）</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">車両</th>
-                        <td>持ち込み（黒ナンバー）</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">保険</th>
-                        <td>貨物軽自動車運送事業に適合する保険への加入必須</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">その他</th>
-                        <td>詳細についてはお問い合わせください。</td>
-                    </tr>
-                </table>
-            </section>
+      <section class="job-requirements">
+        <h2>募集要項</h2>
+        <table>
+          <tr><th>職種</th><td>ドライバー（案件マッチングにより稼働）</td></tr>
+          <tr><th>勤務地</th><td>配達エリアによる（直行直帰）</td></tr>
+          <tr><th>報酬</th><td>案件単位の事前合意（目安あり）</td></tr>
+          <tr><th>勤務時間</th><td>希望シフトに応じた案件提案（5〜8時間目安）</td></tr>
+          <tr><th>車両</th><td>持ち込み（黒ナンバー）</td></tr>
+          <tr><th>保険</th><td>貨物軽自動車運送事業に適合する保険への加入必須</td></tr>
+          <tr><th>その他</th><td>詳細はお問い合わせ／LINEで相談</td></tr>
+        </table>
+      </section>
 
-            <section class="benefits" aria-labelledby="benefits-title">
-                <h2 id="benefits-title">働くメリット</h2>
-                <ul>
-                    <li><strong>自由な働き方：</strong>ご自身のスケジュールに合わせて、働く時間や日数を調整できます。</li>
-                    <li><strong>高収入を目指せる：</strong>配達件数や稼働時間に応じて、頑張りが直接収入に反映されます。</li>
-                    <li><strong>未経験者歓迎：</strong>充実した研修とサポート体制で、初めての方でも安心してスタートできます。</li>
-                    <li><strong>直行直帰OK：</strong>出社の必要はなく、ご自宅から直接配達エリアへ向かえます。</li>
-                </ul>
-            </section>
+      <section class="benefits">
+        <h2>働くメリット</h2>
+        <ul>
+          <li><strong>案件が可視化：</strong>条件・報酬の事前提示で安心感。</li>
+          <li><strong>希望に合わせて：</strong>エリア／時間帯を登録して柔軟に稼働。</li>
+          <li><strong>実績が評価に：</strong>高評価で案件が増え、継続につながる。</li>
+          <li><strong>直行直帰：</strong>無駄な移動をなくして効率良く。</li>
+        </ul>
+      </section>
 
-            <section class="application-flow" aria-labelledby="flow-title">
-                <h2 id="flow-title">応募フロー</h2>
-                <ol>
-                    <li>
-                        <h3>ご応募</h3>
-                        <p>ご応募は、LINEにて受け付けております。お気軽にご連絡ください。</p>
-                    </li>
-                    <li>
-                        <h3>面談</h3>
-                        <p>担当者よりご連絡し、お仕事内容や条件について詳しくご説明します。ご不明な点もここで解消できます。</p>
-                    </li>
-                    <li>
-                        <h3>業務開始</h3>
-                        <p>双方の合意後、契約手続きを経てお仕事スタートとなります。</p>
-                    </li>
-                </ol>
-            </section>
-        </main>
-    </div>
+      <section class="application-flow">
+        <h2>応募フロー（マッチング前提）</h2>
+        <ol>
+          <li>
+            <h3>登録／応募</h3>
+            <p>LINEまたはフォームで基本情報・稼働希望を登録。</p>
+          </li>
+          <li>
+            <h3>案件提案</h3>
+            <p>条件適合度に基づく案件を提示。内容・報酬を事前合意。</p>
+          </li>
+          <li>
+            <h3>業務開始</h3>
+            <p>マッチ成立後、直行直帰で配達へ。評価は次の案件へ反映。</p>
+          </li>
+        </ol>
+      </section>
+    </main>
+  </div>
 
-    <!-- フッター：構成そのまま。ランドマークのみ付与 -->
-    <footer role="contentinfo">
-        <nav aria-label="フッターナビゲーション">
-            <a href="index.html">トップページ</a> |
-            <a href="service.html">事業内容・サービス一覧</a> |
-            <a href="company.html">会社概要・ビジョン</a> |
-            <a href="recruit.html" aria-current="page">採用情報</a> |
-            <a href="contact.html">お問い合わせ</a>
-        </nav>
-        <p>&copy; 2025 S-mystyle</p>
-    </footer>
+  <footer>
+    <nav>
+      <a href="index.html">トップページ</a> |
+      <a href="service.html">事業内容・サービス一覧</a> |
+      <a href="company.html">会社概要・ビジョン</a> |
+      <a href="recruit.html">採用情報</a> |
+      <a href="contact.html">お問い合わせ</a>
+    </nav>
+    <p>&copy; 2025 S-mystyle</p>
+  </footer>
 
 </body>
 </html>
